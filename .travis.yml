@@ -9,12 +9,12 @@ script:
   - docker run -e CI=true timmyaa/react-test npm test 
 
 after_success:
-  - docker build -t timmyaa/multi-client ./client
-  - docker build -t timmyaa/multi-nginx ./nginx
-  - docker build -t timmyaa/multi-server ./server
-  - docker build -t timmyaa/multi-worker ./worker
+  - docker build -t timmya/multi-client ./client
+  - docker build -t timmya/multi-nginx ./nginx
+  - docker build -t timmya/multi-server ./server
+  - docker build -t timmya/multi-worker ./worker
 
-  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push timmya/multi-client
   - docker push timmya/multi-nginx
   - docker push timmya/multi-server
