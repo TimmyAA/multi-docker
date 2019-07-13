@@ -15,8 +15,8 @@ after_success:
   - docker build -t timmyaa/multi-worker ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push timmyaa/multi-client
-  - docker push timmyaa/multi-nginx
-  - docker push timmyaa/multi-server
-  - docker push timmyaa/multi-worker
+  - docker push timmya/multi-client
+  - docker push timmya/multi-nginx
+  - docker push timmya/multi-server
+  - docker push timmya/multi-worker
 
