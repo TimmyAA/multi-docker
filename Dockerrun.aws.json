@@ -5,24 +5,29 @@
       "name": "client",
       "image": "timmya/multi-client",
       "hostname": "client",
+      "memory": 128,
       "essential": false
+      
     },
     {
       "name": "server",
       "image": "timmya/multi-server",
       "hostname": "api",
+      "memory": 128,
       "essential": false
     },
     {
       "name": "worker",
       "image": "timmya/multi-worker",
       "hostname": "worker",
+      "memory": 128,
       "essential": false
     },
     {
       "name": "nginx",
       "image": "timmya/multi-nginx",
       "hostname": "nginx",
+      "memory": 128,
       "essential": true,
       "portMappings": [
         {
